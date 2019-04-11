@@ -1,5 +1,7 @@
 # ChatBotBlue
 
+<img src="2019-04-11 17.10.24.gif">
+
 ## Development!
 Can run the test dummy app!
 ```

@@ -8,7 +8,7 @@
 </div>
 
 <%= form_with model: [chat, chat.messages.new], class: 'flex' do |f| %>
-  <%= f.text_field :content, class: 'flex-1 p-3' %>
+  <%= f.text_field :content, class: 'flex-1 p-3', autocomplete: "off" %>
   <%= f.submit 'Send', class: 'bg-blue-darker text-white' %>
 <% end %>
 </div>
