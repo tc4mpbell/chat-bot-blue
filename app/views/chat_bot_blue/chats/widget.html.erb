@@ -1,5 +1,7 @@
 <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css" rel="stylesheet">
 
 <div class='absolute pin-b pin-r p-3 mr-4 bg-blue' data-chat-bot-blue-widget>
-  <%= button_to "Chat", chats_path, remote: true %>
+  <%= button_to "Chat", chats_path, remote: true, params: {
+    chat_id: params[:chat_id]
+  } %>
 </div>

@@ -1,6 +1,14 @@
-<div data-chat-bot-blue-message-list></div>
+<div class="flex flex-col">
+<div class='font-mono text-xs mb-4 '>
+  <a href='http://192.168.120.29:3000/chat_bot_blue?chat_id=<%= chat.id %>'>http://192.168.120.29:3000/chat_bot_blue?chat_id=<%= chat.id %></a>
+</div>
 
-<%= form_with model: [chat, chat.messages.new] do |f| %>
-  <%= f.text_field :content %>
-  <%= f.submit 'Send' %>
+<div data-chat-bot-blue-message-list>
+  <%= render chat.messages %>
+</div>
+
+<%= form_with model: [chat, chat.messages.new], class: 'flex' do |f| %>
+  <%= f.text_field :content, class: 'flex-1 p-3' %>
+  <%= f.submit 'Send', class: 'bg-blue-darker text-white' %>
 <% end %>
+</div>

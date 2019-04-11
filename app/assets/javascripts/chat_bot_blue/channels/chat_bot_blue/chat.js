@@ -1,6 +1,4 @@
 function startChat(id) {
-  console.log("HEY2! openin chat", id);
-
   App.chat = App.cable.subscriptions.create(
     {
       channel: "ChatBotBlue::ChatChannel",
@@ -19,7 +17,6 @@ function startChat(id) {
 
       received: function(data) {
         // Called when there's incoming data on the websocket for this channel
-        console.log("GOT SOME SHIT", data);
         let list = document.querySelector("[data-chat-bot-blue-message-list]");
 
         list.insertAdjacentHTML("beforeend", data.content);

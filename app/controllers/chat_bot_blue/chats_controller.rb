@@ -6,8 +6,8 @@ module ChatBotBlue
     end
 
     def create
-      @chat = Chat.new
-      if @chat.save
+      @chat = params[:chat_id].present? ? Chat.find(params[:chat_id]) : Chat.new
+      if @chat.persisted? || @chat.save
         flash[:success] = "Chat successfully created"
       else
         flash[:error] = "Something went wrong"

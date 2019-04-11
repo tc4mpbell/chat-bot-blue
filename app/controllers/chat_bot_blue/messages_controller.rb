@@ -13,6 +13,11 @@ module ChatBotBlue
           content: render_to_string(@message)
         )
 
+        # need this b/c render_to_string sets the response content 
+        # type (boo): https://github.com/rails/rails/issues/14173
+        respond_to do |format|
+          format.js
+        end
       else
         flash[:error] = "Something went wrong"
       end
