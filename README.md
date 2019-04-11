@@ -1,8 +1,15 @@
 # ChatBotBlue
-Short description and motivation.
+
+## Development!
+Can run the test dummy app!
+```
+cd test/dummy
+rails s
+```
+annnnd check out `http://localhost:3000/chat_bot_blue`.
 
 ## Usage
-How to use my plugin.
+TODO
 
 ## Installation
 Add this line to your application's Gemfile:
