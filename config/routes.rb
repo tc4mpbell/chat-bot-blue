@@ -3,5 +3,5 @@ ChatBotBlue::Engine.routes.draw do
     resource :messages
   end
   
-  root to: 'chats#widget'
+  # root to: 'chats#widget'
 end

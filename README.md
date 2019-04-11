@@ -8,7 +8,7 @@ Can run the test dummy app!
 cd test/dummy
 rails s
 ```
-annnnd check out `http://localhost:3000/chat_bot_blue`.
+annnnd check out `http://localhost:3000`.
 
 ## Usage
 TODO

@@ -7,5 +7,9 @@ module ChatBotBlue
         helper ChatBotBlue::ApplicationHelper
       end
     end
+
+    initializer "chat_bot_blue.assets.precompile" do |app|
+      app.config.assets.precompile += %w( application.js )
+    end
   end
 end
