@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_04_11_180420) do
     t.integer "chat_id"
     t.text "content"
     t.integer "sender_id"
+    t.string "sender_session_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chat_id"], name: "index_chat_bot_blue_messages_on_chat_id"

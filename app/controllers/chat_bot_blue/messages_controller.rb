@@ -5,6 +5,7 @@ module ChatBotBlue
     def create
       @chat = Chat.find(params[:chat_id])
       @message = @chat.messages.new(message_params)
+      @message.sender_session_id = session.id
 
       if @message.save
         flash[:success] = "Message successfully created"
