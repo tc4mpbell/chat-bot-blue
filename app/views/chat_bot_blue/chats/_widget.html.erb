@@ -1,0 +1,26 @@
+
+<%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css' %>
+<%= javascript_include_tag "chat_bot_blue/application" %>
+
+
+<style>
+  [data-chat-bot-blue-message-sender-id] {
+    background: #6cb2eb;
+    text-align: left;
+    margin-right: 4em;
+  }
+
+  [data-chat-bot-blue-message-sender-id='<%= session.id %>'] {
+    background: #ddd;
+    text-align: right;
+    margin-left: 4em;
+    margin-right: 0;
+  }
+
+</style>
+
+<div class='absolute pin-b pin-r p-3 mr-4 bg-blue' data-chat-bot-blue-widget>
+  <%= button_to "Chat", chat_bot_blue.chats_path, remote: true, params: {
+    chat_id: params[:chat_id]
+  } %>
+</div>
