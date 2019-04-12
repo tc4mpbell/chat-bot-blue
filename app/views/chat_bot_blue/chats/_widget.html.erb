@@ -1,7 +1,6 @@
-
+<%= stylesheet_link_tag 'chat_bot_blue/messages' %>
 <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/tailwindcss/dist/utilities.min.css' %>
 <%= javascript_include_tag "chat_bot_blue/application" %>
-
 
 <style>
   [data-chat-bot-blue-message-sender-id] {
@@ -16,11 +15,14 @@
     margin-left: 4em;
     margin-right: 0;
   }
-
 </style>
 
-<div class='absolute pin-b pin-r p-3 mr-4 bg-blue' data-chat-bot-blue-widget>
-  <%= button_to "Chat", chat_bot_blue.chats_path, remote: true, params: {
-    chat_id: params[:chat_id]
-  } %>
+<div class='bg-blue p-3 mr-3' data-chat-bot-blue-widget="<%= params[:chat_id] || chat&.id %>">
+  <% if defined? chat %>
+    <%= render chat %>
+  <% else %>
+    <%= button_to "Chat", chat_bot_blue.chats_path, remote: true, params: {
+      chat_id: params[:chat_id]
+    } %>
+  <% end %>
 </div>

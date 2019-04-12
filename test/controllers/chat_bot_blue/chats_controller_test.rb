@@ -4,8 +4,8 @@ module ChatBotBlue
   class ChatsControllerTest < ActionDispatch::IntegrationTest
     include Engine.routes.url_helpers
 
-    test "should get widget" do
-      get chats_widget_url
+    test "should get index" do
+      get chats_url
       assert_response :success
     end
 

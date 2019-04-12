@@ -9,7 +9,7 @@ module ChatBotBlue
     end
 
     initializer "chat_bot_blue.assets.precompile" do |app|
-      app.config.assets.precompile += %w( application.js )
+      app.config.assets.precompile += %w( application.js, chat_bot_blue/messages.css )
     end
   end
 end

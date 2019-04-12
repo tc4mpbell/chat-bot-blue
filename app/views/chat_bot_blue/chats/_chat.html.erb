@@ -1,14 +1,14 @@
 <div class="flex flex-col">
-<div class='font-mono text-xs mb-4 '>
-  <a href='http://192.168.120.29:3000/?chat_id=<%= chat.id %>'>http://192.168.120.29:3000/?chat_id=<%= chat.id %></a>
-</div>
+  <div class='font-mono text-xs mb-4 '>
+    <a href='http://192.168.120.29:3000/?chat_id=<%= chat.id %>'>http://192.168.120.29:3000/?chat_id=<%= chat.id %></a>
+  </div>
 
-<div data-chat-bot-blue-message-list>
-  <%= render chat.messages %>
-</div>
+  <div data-chat-bot-blue-message-list="<%= chat.id %>">
+    <%= render chat.messages %>
+  </div>
 
-<%= form_with model: [chat, chat.messages.new], class: 'flex' do |f| %>
-  <%= f.text_field :content, class: 'flex-1 p-3', autocomplete: "off" %>
-  <%= f.submit 'Send', class: 'bg-blue-darker text-white' %>
-<% end %>
+  <%= form_with model: [chat, chat.messages.new], class: 'flex' do |f| %>
+    <%= f.text_field :content, class: 'flex-1 p-3', autocomplete: "off" %>
+    <%= f.submit 'Send', class: 'bg-blue-darker text-white' %>
+  <% end %>
 </div>

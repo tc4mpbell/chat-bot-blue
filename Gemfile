@@ -16,3 +16,8 @@ gemspec
 
 ## gotta run dummy app with something that supports sockets
 gem 'puma'
+
+group :development do
+  # gem 'guard' # install this globally
+  gem 'guard-minitest'
+end

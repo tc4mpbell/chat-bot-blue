@@ -2,7 +2,12 @@ require_dependency "chat_bot_blue/application_controller"
 
 module ChatBotBlue
   class ChatsController < ApplicationController
-    def widget
+    def index 
+      @chats = Chat.all
+    end
+
+    def show
+      @chat = Chat.find(params[:id])
     end
 
     def create
@@ -13,6 +18,5 @@ module ChatBotBlue
         flash[:error] = "Something went wrong"
       end
     end
-    
   end
 end

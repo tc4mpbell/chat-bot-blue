@@ -1,0 +1,18 @@
+
+<div class="max-w-3xl">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Started</th>
+        <th>Last activity</th>
+        <th>Messages</th> 
+        <th>Last message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render collection: @chats, partial: 'chat_list_item', as: :chat %>
+    </tbody>
+  </table>
+</div>
+
+<%= render 'widget_container' %>

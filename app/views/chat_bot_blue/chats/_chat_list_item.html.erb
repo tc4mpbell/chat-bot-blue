@@ -1,0 +1,9 @@
+<tr>
+  <td>
+    <%= link_to 'launch', chat, remote: true %>
+  </td>
+  <td><%= chat.created_at %></td>
+  <td><%= chat.updated_at %></td>
+  <td><%= chat.messages.count %></td>
+  <td><%= chat.messages.last&.content %>
+</tr>

@@ -1,3 +1,3 @@
 startChat('<%= @chat.id %>');
 
-document.querySelector("[data-chat-bot-blue-widget]").innerHTML = "<%== j render @chat %>"
+document.querySelector("[data-chat-bot-blue-widget='<%= @chat.id %>']").innerHTML = "<%== j render @chat %>"

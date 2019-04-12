@@ -4,15 +4,11 @@ module ChatBotBlue
   class MessagesControllerTest < ActionDispatch::IntegrationTest
     include Engine.routes.url_helpers
 
-    test "should get create" do
-      get messages_create_url
+    def test_create
+      @chat = chat_bot_blue_chats(:one)
+      @message = nil
+      post chat_messages_path(@chat, format: :js), params: { message: { content: 'test' } }
       assert_response :success
     end
-
-    test "should get update" do
-      get messages_update_url
-      assert_response :success
-    end
-
   end
 end
